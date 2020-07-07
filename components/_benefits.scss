@@ -89,9 +89,9 @@
 // }
 
 .list {
-  @include none();
   display: flex;
   flex-wrap: wrap;
+  @include none();
 
   .item {
     position: relative;
@@ -137,9 +137,9 @@
   //   }
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     padding-left: 239px;
-      .item {
-        max-width: 210px;
-      }
+    .item {
+      max-width: 210px;
+    }
   }
   @media screen and (min-width: $desktop) {
     // padding-left: 30px;
