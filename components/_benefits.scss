@@ -138,14 +138,14 @@
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     padding-left: 239px;
     .item {
-      max-width: 210px;
+      width: 210px;
     }
   }
   @media screen and (min-width: $desktop) {
     // padding-left: 30px;
     margin-right: 130px;
     .item {
-      max-width: 170px;
+      width: 170px;
     }
   }
 }
