@@ -1,110 +1,135 @@
 .benefits {
-    @include container();
-    background-color: $bg-color;
+  @include container();
+  background-color: $bg-color;
 
-    color: $color;
-    outline: 1px solid red;
+  color: $color;
+  outline: 1px solid red;
+  .container {
+    margin-left: 31px;
+    margin-right: 31px;
+    outline: 1px solid green;
+  }
+
+  .subject {
+    // position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include font(11px, 1.36, 600, 0.1em);
+    text-align: left;
+  }
+
+  // & h3{
+  //     @include none();
+  // }
+
+  // .icon {
+  //     position: absolute;
+  // }
+
+  .title {
+    @include none();
+    @include font();
+    margin-bottom: 20px;
+    font-family: Raleway;
+    text-align: left;
+  }
+  .text {
+    @include font(18px, 1.7, 400, 0.02em);
+    text-align: left;
+    @include none();
+    margin-bottom: 44px;
+    color: $color-second;
+  }
+  @media screen and (max-width: $tablet - 1px) {
+    max-width: $mobile;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    max-width: $tablet;
+    @include container(100px);
     .container {
-        margin-left: 31px;
-        margin-right: 31px;
-        outline: 1px solid green;
-    }
-
-    .subject {
-        margin-top: 0;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        @include font(11px, 1.36, 600, 0.1em);
-        text-align: left;
+      margin-left: 40px;
+      margin-right: 39px;
     }
     .title {
-        @include none();
-        @include font();
-        margin-bottom: 20px;
-        font-family: Raleway;
-        text-align: left;
+      margin-right: 308px;
     }
     .text {
-        @include font(18px, 1.7, 400, 0.02em);
-        text-align: left;
-        @include none();
-        margin-bottom: 44px;
-        color: $color-second;
+      margin-right: 228px;
     }
-    @media screen and (max-width: $tablet - 1px) {
-        max-width: $mobile;
+  }
+  @media screen and (min-width: $desktop) {
+    @include container(121px);
+    .wrap {
+      margin-top: 9px;
     }
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-        max-width: $tablet;
-        @include container(100px);
-        .container {
-            margin-left: 40px;
-            margin-right: 39px;
-        }
-        .title {
-            margin-right: 308px;
-        }
-        .text {
-            margin-right: 228px;
-        }
+    .container {
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row-reverse;
     }
-    @media screen and (min-width: $desktop) {
-        @include container(121px);
-        .wrap {
-            margin-top: 9px;
-        }
-        .container {
-            max-width: $desktop;
-            margin-left: 155px;
-            margin-right: 125px;
-            display: flex;
-            flex-direction: row-reverse;
-        }
-        .title {
-            margin-right: 205px;
-        }
+    .title {
+      margin-right: 205px;
+    }
 
-        .text {
-            margin-right: 125px;
-        }
+    .text {
+      margin-right: 125px;
     }
+  }
 }
+// .subject {
+//   &::before {
+//     width: 1px;
+//     height: 60px;
+//     background-color: $color;
+//     margin-right: 20px;
+//   }
+// }
 .flex {
-    .list {
-        @include none();
-        display: flex;
+  .list {
+    @include none();
+    display: flex;
+  }
+  .item {
+    position: relative;
+    width: 193px;
+    height: 133px;
+    background-color: $bg-third;
+    &:nth-child(1) {
+      margin: 0 30px 30px 0;
     }
+    &:nth-child(2) {
+      margin-top: 30px;
+    }
+  }
+  .number {
+    margin: 20px 0 6px;
+    @include font(42px, 1.4, 700, 0.05em);
+  }
+  .item-text {
+    @include none();
+    @include font(11px, 1.4, 600);
+    margin: 0 35px;
+  }
+  .icon {
+    position: absolute;
+    width: 13px;
+    height: 22px;
+    outline: 1px solid red;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 279px;
     .item {
-        width: 193px;
-        height: 133px;
-        background-color: $bg-third;
-        &:nth-child(1) {
-            margin: 0 30px 30px 0;
-        }
-        &:nth-child(2) {
-            margin-top: 30px;
-        }
+      width: 210px;
     }
-    .number {
-        margin: 20px 0 6px;
-        @include font(42px, 1.4, 700, 0.05em);
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 30px;
+    margin-right: 130px;
+    .item {
+      width: 170px;
     }
-    .item-text {
-        @include none();
-        @include font(11px, 1.4, 600);
-        margin: 0 35px;
-    }
-    @media screen and (min-width: $tablet) {
-        margin-left: 279px;
-        .item {
-            width: 210px;
-        }
-    }
-    @media screen and (min-width: $desktop) {
-        margin-left: 0;
-        margin-right: 130px;
-        .item {
-            width: 170px;
-        }
-    }
+  }
 }
