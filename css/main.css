@@ -109,12 +109,7 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-  }
-  .benefits .title {
-    margin-right: 205px;
-  }
-  .benefits .text {
-    margin-right: 125px;
+    padding: 0 125px;
   }
 }
 
