@@ -1,10 +1,10 @@
-.benefits {
-  @include container();
+.page_advantages {
   background-color: $bg-color;
+  @include container();
 
-  color: $color;
+  color: $primaryTextColor;
   outline: 1px solid red;
-  .container {
+  & .container {
     outline: 1px solid green;
     margin-left: auto;
     margin-right: auto;
@@ -28,26 +28,25 @@
       left: 0;
       width: 60px;
       height: 1px;
-
     }
   }
 
-  .title {
+  & .title {
     @include none();
     @include font();
     margin-bottom: 20px;
     font-family: Raleway;
     text-align: left;
   }
-  .text {
+  & .text {
     @include font(18px, 1.7, 400, 0.02em);
     text-align: left;
     @include none();
     margin-bottom: 44px;
-    color: $color-second;
+    color: $secondaryTextColor;
   }
   @media screen and (max-width: $tablet - 1px) {
-    .container {
+    & .container {
       max-width: $mobile;
       padding-left: 31px;
       padding-right: 31px;
@@ -55,7 +54,7 @@
   }
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     @include container(100px);
-    .container {
+    & .container {
       max-width: $tablet;
       padding-left: 40px;
       padding-right: 39px;
@@ -63,7 +62,7 @@
     // .title {
     //   margin-right: 308px;
     // }
-    .text {
+    & .text {
       margin-right: 228px;
     }
   }
@@ -72,7 +71,7 @@
     .wrap {
       margin-top: 9px;
     }
-    .container {
+    & .container {
       max-width: $desktop;
 
       display: flex;
@@ -90,7 +89,7 @@
 //   }
 // }
 
-.list {
+.items {
   display: flex;
   flex-wrap: wrap;
   @include none();
@@ -99,7 +98,7 @@
     position: relative;
     max-width: calc((100% - 30px) / 2);
     height: 133px;
-    background-color: $bg-second;
+    background-color: $secondaryBgColor;
     padding: 20px;
     &:nth-child(2n + 1) {
       margin: 0 30px 30px 0;

@@ -1,14 +1,15 @@
-$color: #303030;
-$color-first: #fff;
-$color-second: #555;
-$color-third: #9da4bd;
-$color-orange: #ff6c00;
-$color-header: rgba(157, 164, 189, 0.6);
+$primaryTextColor: #303030;
+$primaryWhiteColor: #fff;
+$secondaryTextColor: #555;
+$tertiaryTextColor: #9da4bd;
+$orangeAccentColor: #ff6c00;
+$headerColor: rgba(157, 164, 189, 0.6);
 
 $bg-color: #fff;
-$bg-first: #191c26;
-$bg-second: #f7f7f7;
-$bg-gradient: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+$primaryBgColor: #191c26;
+$secondaryBgColor: #f7f7f7;
+$bgGradient: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+$transmition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 
 $mobile: 480px;
 $tablet: 768px;
