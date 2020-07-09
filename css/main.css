@@ -16,6 +16,7 @@
 }
 
 .benefits .subject {
+  position: relative;
   margin-top: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -26,6 +27,18 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-align: left;
+  padding-left: 80px;
+}
+
+.benefits .subject::before {
+  position: absolute;
+  content: "";
+  background-image: url(../image/line.svg);
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 0;
+  width: 60px;
+  height: 1px;
 }
 
 .benefits .title {
